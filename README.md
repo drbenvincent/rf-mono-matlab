@@ -17,6 +17,9 @@ This minimal set of MATLAB functions will set up a simple neural network to lear
 
 Included is a sample of nearly 50,000 16×16 pixel image patches which were randomly sampled from the van Hateren image database (which doesn’t seem to be available online any more, but are possibly mirrored elsewhere). You can of course make your own set of image samples, and the code will work with whatever size image patches you give it. Although it assumes the image patches are square.
 
+![](http://www.inferencelab.com/energy-efficient-receptive-field-code/rfplot/)
+![](http://www.inferencelab.com/?attachment_id=125)
+
 **Instructions**
 
 * Download the MATLAB code and the image patch dataset and place in a folder.
