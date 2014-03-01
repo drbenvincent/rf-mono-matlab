@@ -66,6 +66,7 @@ net.lr_schedule		=net.lr_schedule + 1;
 
 if rem(net.epoch,net.display_interval)==0
 	% PLOT FILTERS
+	figure(1), clf
 	see_matrix(net.w);
 
 	figure(2),clf,colormap(gray)

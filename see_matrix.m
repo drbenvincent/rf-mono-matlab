@@ -45,8 +45,8 @@ for j=0:mm-1
 end
 
 
-figure(1)
-clf
+%figure(1)
+%clf
 colormap(gray)
 imagesc(M)
 axis square

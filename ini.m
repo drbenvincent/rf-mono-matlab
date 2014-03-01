@@ -32,11 +32,13 @@ input_image_size    =size(IMAGES,1);
 net.numin   =input_image_size;
 net.numhid  =numhid;
 net.wcon	=0;	% weight decay parameter
+
 % Create Gaussian distributed random weights
 net.w      =(randn(net.numhid,net.numin)*0.1);
+%net.w=generate_correlated_random_patches( sqrt(net.numin), net.numhid);
 
 % DEFINE OTHER THINGS
-net.lr				=0.005;
+net.lr				=0.004;
 net.display			=1;
 net.SYNAPSE_COST    =SYNAPSE_COST;
 net.RATE_COST       =RATE_COST;
