@@ -47,10 +47,9 @@ net.epoch			=1;
 % Set L2 of each filter to 1
 [net]				=set_l2_to_1(net);
 
-
 % parameters to play around with, but these work just fine
-net.lr					=0.001; % learning rate
-net.display_interval	=100;	% just determines how frequency of replotting 
+net.lr					=0.002; % learning rate
+net.display_interval	=1000;	% just determines how frequency of replotting 
 
 % plot the initial random receptive fields
 see_matrix(net.w);
