@@ -30,31 +30,26 @@ else
 	x=IMAGES;
 end
 
-LR		= net.lr;
-W		= net.w;
-
 % Calculate optimal outputs
 y		= optimise_outputs(net,x);
 
 % LMS rule for autoassociator, equal to Oja's rule ==============
 % The next bit calculates it but I've expanded it to calculate it
 % faster : dw=( (x'-net.w*y')*y );
-r		= W'*y; 
+r		= net.w'*y; 
 e		= x-r;
 dw		= y*e';
 % also do bit for synaptic cost
 if net.SYNAPSE_COST~=0
-	dw	= dw - ( net.SYNAPSE_COST * sign(W) );
+	dw	= dw - ( net.SYNAPSE_COST * sign(net.w) );
 end
 
-%dw		= dw*LR;
-dw		= dw*LR*(1/net.batch_size);
+dw		= dw*net.lr*(1/net.batch_size);
 % ===============================================================
 
 
 % Update weights ====
-W 		= W+dw;
-net.w	= W;
+net.w	= net.w+dw;
 % ===================
 
 % Set L2 of each filter to 1
