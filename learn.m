@@ -48,6 +48,7 @@ if net.SYNAPSE_COST~=0
 end
 
 dw		= dw*LR;
+%dw		= dw*LR*(1/net.batch_size);
 % ===============================================================
 
 
