@@ -52,4 +52,7 @@ imagesc(M)
 axis square
 axis off
 
+% fill the figure window
+set(gca,'Position',[0 0 1 1])
+
 return

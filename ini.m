@@ -38,7 +38,6 @@ net.w      =(randn(net.numhid,net.numin)*0.1);
 %net.w=generate_correlated_random_patches( sqrt(net.numin), net.numhid);
 
 % DEFINE OTHER THINGS
-net.lr				=0.004;
 net.display			=1;
 net.SYNAPSE_COST    =SYNAPSE_COST;
 net.RATE_COST       =RATE_COST;
@@ -47,10 +46,10 @@ net.lr_schedule		=1;
 net.epoch			=1;
 
 % Set L2 of each filter to 1
+net.lr				=0.8;
 [net]				=set_l2_to_1(net);
 
 % parameters to play around with, but these work just fine
-net.lr					=0.002; % learning rate
 net.display_interval	=1000;	% just determines how frequency of replotting 
 
 % plot the initial random receptive fields

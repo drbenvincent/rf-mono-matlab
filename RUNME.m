@@ -1,7 +1,7 @@
 % RUNME.m
 
 % initialise the network 
-synapse_cost = 0.005; % try around 0.03 for starters 
+synapse_cost = 0.005; % try around 0.05 for starters 
 firing_rate_cost = 0; % try around 0.2 for starters 
 num_neurons = 64; 
 % initialise the network

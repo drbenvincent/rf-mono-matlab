@@ -47,8 +47,8 @@ if net.SYNAPSE_COST~=0
 	dw	= dw - ( net.SYNAPSE_COST * sign(W) );
 end
 
-dw		= dw*LR;
-%dw		= dw*LR*(1/net.batch_size);
+%dw		= dw*LR;
+dw		= dw*LR*(1/net.batch_size);
 % ===============================================================
 
 
