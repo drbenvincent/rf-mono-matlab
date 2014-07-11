@@ -15,10 +15,20 @@ This code is a minimum working example of the code used in these papers. If you 
 
 * Vincent B & Baddeley R, (2003) Synaptic energy efficiency in retinal processing, Vision Research 43:1283-1290.
 
-## Coming soon...
+## To Do list...
 
-* updates to code
 * a Python version, in a new repo.
+
+## File overview
+We actually have two implementations here, which do the same thing. The first is coded in standard Matlab, using procedural programming. The second (added July 2014) is implemented using Object Oriented Programming. These two implementations are entirely separate, and I just did it as part of learning how to do OOP.
+
+### Standard implementation
+
+Run `RUNME.m` and it uses the functions in `/funcs`
+
+### Object oriented implementation
+
+Run `RUNME_OO.m` and it uses the objects in `/funcsOO`
 
 ## Instructions
 
