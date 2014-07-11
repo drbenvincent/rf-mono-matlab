@@ -66,9 +66,8 @@ for n=1:20
 	y(:,SET==1)=y(:,SET==1)+A.*(W*error(:,SET==1) - B*sign(y(:,SET==1)));	
 	% ===================================================================
 
-	y_new=y;
-	
-	diff=sum(sum((y_old-y_new).^2));
+% 	y_new=y;
+% 	diff=sum(sum((y_old-y_new).^2));
 	
 	% decrease lr (K) over time
 	K=K*0.95;
