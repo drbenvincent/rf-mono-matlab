@@ -26,7 +26,7 @@ clear
 % define parameters
 synapse_cost        = 0; 
 firing_rate_cost    = 0.2; 
-num_neurons         = 64; 
+num_neurons         = 324; 
 
 % initialise the network
 [net, IMAGES] = ini(num_neurons,synapse_cost,firing_rate_cost);
