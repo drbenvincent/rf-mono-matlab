@@ -31,6 +31,7 @@ classdef dataset
             obj.nImages  = size(obj.imagedata,2);
             obj.counter  = 1;
 			obj.input_image_size = size(obj.imagedata,1);
+			display('dataset object created')
         end
         
         function obj = increment_counter_by(obj, increment)

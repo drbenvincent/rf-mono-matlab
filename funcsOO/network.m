@@ -1,17 +1,20 @@
-classdef network
+classdef network < handle
 	%% NETWORK An autoassociator neural network object
 	% Detailed exlanation here
+	% Making this a handle class means it can change it's own properties
+	% without having to return values back to the command window.
 	
 	% public properties
 	properties
 		display_interval
+		lr
 	end
 	
 	% read-only properties
 	properties(GetAccess='public', SetAccess='private')
 		synapse_cost
 		firing_rate_cost
-		lr
+		
 		numin
 		numhid
 		w
@@ -25,19 +28,21 @@ classdef network
 	
 	methods
 		
+		% Class constructor
 		function obj=network(num_neurons,synapse_cost,firing_rate_cost, numin)
-			% Class constructor
+			% intialise with parameters
 			obj.numhid				= num_neurons;
 			obj.synapse_cost		= synapse_cost;
 			obj.firing_rate_cost	= firing_rate_cost;
 			obj.numin				= numin;
+			% initialise with some defaults
 			obj.lr					= 0.8; % default
 			obj.batchesDone			= 0;
 			obj.batchSize			= 100;
 			obj.display_interval	= 1000;
 			% create random weights
 			obj.w =randn(obj.numhid, obj.numin)*0.1;
-			
+			display('network object created')
 		end
 		
 		function plot_receptive_fields(obj)
@@ -73,7 +78,7 @@ classdef network
 		end
 		
 		
-		function obj = learn(obj, dataset)
+		function learn(obj, dataset)
 			% Learn with Mini Batch Gradient Descent
 			
 			% give me images
